@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace SupplyWeb.Application.ViewModels
 {
-    public class ProductViewModels
+    public class InboundViewModel
     {
-        public IList<Product> Products { get; set; }
+        public IList<Inbound> Inbounds { get; set; }
     }
 }
