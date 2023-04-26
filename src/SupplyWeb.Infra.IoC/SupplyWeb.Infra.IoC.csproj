@@ -34,6 +34,9 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject, Version=3.3.6.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ninject.3.3.6\lib\net45\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -52,11 +55,16 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicesModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SupplyWeb.Application\SupplyWeb.Application.csproj">
       <Project>{8906252b-f379-4d75-95bd-f61116cb5a11}</Project>
       <Name>SupplyWeb.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SupplyWeb.Domain\SupplyWeb.Domain.csproj">
+      <Project>{569b55e9-ac73-40a0-bb3f-39b6d0aef468}</Project>
+      <Name>SupplyWeb.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\SupplyWeb.Infra.Data\SupplyWeb.Infra.Data.csproj">
       <Project>{07f0c613-c53a-4bf8-aab1-50cfeda3e6a8}</Project>
