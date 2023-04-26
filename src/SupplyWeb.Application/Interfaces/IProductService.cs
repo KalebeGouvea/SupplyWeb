@@ -9,6 +9,6 @@ namespace SupplyWeb.Application.Services
 {
     public interface IProductService
     {
-        ProductViewModel GetProducts();
+        Task<ProductViewModel> GetProducts();
     }
 }

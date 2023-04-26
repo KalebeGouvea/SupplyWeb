@@ -55,6 +55,9 @@
     <Compile Include="Entities\Inbound.cs" />
     <Compile Include="Entities\Outbound.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Interfaces\IInboundRepository.cs" />
+    <Compile Include="Interfaces\IOutboundRepository.cs" />
+    <Compile Include="Interfaces\IProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

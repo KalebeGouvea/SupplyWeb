@@ -9,6 +9,6 @@ namespace SupplyWeb.Application.Services
 {
     public interface IOutboundService
     {
-        OutboundViewModel GetOutbounds();
+        Task<OutboundViewModel> GetOutbounds();
     }
 }

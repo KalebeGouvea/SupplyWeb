@@ -57,6 +57,9 @@
     <Compile Include="EntitiesConfiguration\InboundConfiguration.cs" />
     <Compile Include="EntitiesConfiguration\ProductConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\InboundRepository.cs" />
+    <Compile Include="Repositories\OutboundRepository.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SupplyWeb.Domain\SupplyWeb.Domain.csproj">
