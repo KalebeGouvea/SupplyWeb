@@ -12,7 +12,7 @@ namespace SupplyWeb.Infra.Data.EntitiesConfiguration
     {
         public OutboundConfiguration()
         {
-            ToTable("inbounds");
+            ToTable("outbounds");
 
             HasKey(p => p.Id);
 
