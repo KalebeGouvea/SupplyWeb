@@ -21,6 +21,11 @@ namespace SupplyWeb.Web.Controllers
         }
         public async Task<ActionResult> Index()
         {
+            return View();
+        }
+
+        public async Task<ActionResult> Products()
+        {
             var model = await _productService.GetProducts();
             return View(model);
         }

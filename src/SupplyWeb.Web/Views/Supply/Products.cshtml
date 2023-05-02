@@ -1,0 +1,62 @@
+﻿@model SupplyWeb.Application.ViewModels.ProductViewModel
+
+@{
+    ViewBag.Title = "Mercadorias";
+}
+
+<h2>Mercadorias cadastradas</h2>
+<br />
+
+<p>
+    @*
+        @Html.ActionLink("Nova Mercadoria", "Create")
+    *@
+    <a class="btn btn-outline-dark" href='@Url.Action("Create")' role="button">Nova Mercadoria</a>
+</p>
+<table class="table table-hover table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Products[0].Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Products[0].RegistrationNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Products[0].Manufacturer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Products[0].Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Products[0].Description)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var product in Model.Products)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => product.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => product.RegistrationNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => product.Manufacturer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => product.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => product.Description)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = product.Id }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = product.Id }) |
+                @Html.ActionLink("Deletar", "Delete", new { id = product.Id })
+            </td>
+        </tr>
+    }
+
+</table>
