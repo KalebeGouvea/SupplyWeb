@@ -4,59 +4,19 @@
     ViewBag.Title = "Mercadorias";
 }
 
-<h2>Mercadorias cadastradas</h2>
-<br />
+<h2>Início</h2>
+<hr />
 
-<p>
-    @*
-        @Html.ActionLink("Nova Mercadoria", "Create")
-    *@
-    <a class="btn btn-default" href='@Url.Action("Create")' role="button">Nova Mercadoria</a>
-</p>
-<table class="table table-hover table-striped">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Products[0].Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Products[0].RegistrationNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Products[0].Manufacturer)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Products[0].Type)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Products[0].Description)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var product in Model.Products)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => product.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => product.RegistrationNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => product.Manufacturer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => product.Type)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => product.Description)
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "Edit", new { id = product.Id }) |
-                @Html.ActionLink("Detalhes", "Details", new { id = product.Id }) |
-                @Html.ActionLink("Deletar", "Delete", new { id = product.Id })
-            </td>
-        </tr>
-    }
-
-</table>
+<div class="alert alert-secondary" role="alert">
+    <h4 class="alert-heading">Bem-vindo ao Supply Manager</h4>
+    <p>O Supply Manager é um sistema de Supply Chain onde podem ser cadastrados os tipos de mercadorias e as entradas e saídas das mesmas.</p>
+    <p>O sistema possui as seguintes funcionalidades:</p>
+    <ul>
+        <li>Gerenciamento das mercadorias</li>
+        <li>Gerenciamento de entrada e saída de mercadorias</li>
+        <li>Tela para visualização das entradas e saídas por mês de cada mercadoria em formato de gráfico</li>
+        <li>Exportar relatório mensal com todas as entradas e saídas de todas as mercadorias no formato PDF.</li>
+    </ul>
+    <hr>
+    <p class="mb-0">As funcionalidades podem ser acessadas no menu superior da aplicação</p>
+</div>
