@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -18,9 +19,10 @@ namespace SupplyWeb.Web.Controllers
             _inboundService = inboundService;
             _outboundService = outboundService;
         }
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View();
+            var model = await _productService.GetProducts();
+            return View(model);
         }
     }
 }

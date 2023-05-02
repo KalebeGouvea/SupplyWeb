@@ -20,7 +20,8 @@ namespace SupplyWeb.Infra.Data.Repositories
 
         public async Task<IList<Product>> GetProducts()
         {
-            return await _context.Products.ToListAsync();
+            var products = await _context.Products.ToListAsync();
+            return products;
         }
     }
 }
