@@ -1,4 +1,5 @@
 ﻿using SupplyWeb.Application.Services;
+using SupplyWeb.Application.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,25 @@ namespace SupplyWeb.Web.Controllers
         public async Task<ActionResult> Products()
         {
             var model = await _productService.GetProducts();
-            return View(model);
+            return View("Product/Products", model);
+        }
+
+        public ActionResult CreateProduct()
+        {
+            return View("Product/Create");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> CreateProduct(ProductViewModel product)
+        {
+            if (ModelState.IsValid)
+            {
+                await _productService.AddProducts(product);
+                return RedirectToAction("Products");
+            }
+
+            return View(product);
         }
     }
 }

@@ -10,5 +10,6 @@ namespace SupplyWeb.Domain.Interfaces
     public interface IProductRepository
     {
         Task<IList<Product>> GetProducts();
+        Task AddProduct(Product product);
     }
 }

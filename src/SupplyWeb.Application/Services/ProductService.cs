@@ -22,5 +22,10 @@ namespace SupplyWeb.Application.Services
             vm.Products = await _productRepository.GetProducts();
             return vm;
         }
+
+        public async Task AddProducts(ProductViewModel product)
+        {
+            await _productRepository.AddProduct(product.Products[0]);
+        }
     }
 }

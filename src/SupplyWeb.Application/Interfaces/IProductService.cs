@@ -10,5 +10,6 @@ namespace SupplyWeb.Application.Services
     public interface IProductService
     {
         Task<ProductViewModel> GetProducts();
+        Task AddProducts(ProductViewModel product);
     }
 }

@@ -23,5 +23,11 @@ namespace SupplyWeb.Infra.Data.Repositories
             var products = await _context.Products.ToListAsync();
             return products;
         }
+
+        public async Task AddProduct(Product product)
+        {
+            _context.Products.Add(product);
+            await _context.SaveChangesAsync();
+        }
     }
 }
